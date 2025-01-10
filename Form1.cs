@@ -50,6 +50,15 @@ namespace COMP3951_Lab1_WillOtterbein
         }
 
         /// <summary>
+        /// Show records in the db.
+        /// </summary>
+        /// <param name="nRec"></param>
+        private void AddDBObjToLabel(DBFake.DBRecord nRec)
+        {
+            dbText.Text += nRec.ToString();
+        }
+
+        /// <summary>
         /// Handle submission of the form.
         /// </summary>
         /// <param name="sender"></param>
@@ -80,8 +89,7 @@ namespace COMP3951_Lab1_WillOtterbein
             ClearFormFields();
 
             // Add record to the database and records preview panel
-            DBFake.AddRecordToDB(firstNameValue, lastNameValue, middleNameValue);
-            // Update records panel TBD...
+            DBFake.DBRecord nRec = DBFake.AddRecordToDB(firstNameValue, lastNameValue, middleNameValue);
 
             // Create a simple message string using fomatted string shorthand and
             // the multiline string shorthand
@@ -92,6 +100,12 @@ namespace COMP3951_Lab1_WillOtterbein
 
             // Show message that the form is submitted
             MessageBox.Show(message);
+
+            // Update records panel TBD...
+            // Literally just a big label
+            // Add to the label
+            // Rich text which is read only, maybe this is better than a label
+            AddDBObjToLabel(nRec);
         }
 
         /// <summary>

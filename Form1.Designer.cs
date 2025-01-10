@@ -45,6 +45,7 @@
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dbText = new System.Windows.Forms.Label();
             this.personalInformation.SuspendLayout();
             this.FormControlPanel.SuspendLayout();
             this.accountPreviewBox.SuspendLayout();
@@ -180,6 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dbPreviewPanel.BackColor = System.Drawing.SystemColors.Info;
+            this.dbPreviewPanel.Controls.Add(this.dbText);
             this.dbPreviewPanel.Controls.Add(this.vScrollBar1);
             this.dbPreviewPanel.Controls.Add(this.hScrollBar1);
             this.dbPreviewPanel.Location = new System.Drawing.Point(6, 28);
@@ -212,6 +214,14 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // dbText
+            // 
+            this.dbText.AutoSize = true;
+            this.dbText.Location = new System.Drawing.Point(5, 13);
+            this.dbText.Name = "dbText";
+            this.dbText.Size = new System.Drawing.Size(0, 25);
+            this.dbText.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -228,6 +238,7 @@
             this.FormControlPanel.ResumeLayout(false);
             this.accountPreviewBox.ResumeLayout(false);
             this.dbPreviewPanel.ResumeLayout(false);
+            this.dbPreviewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
@@ -252,6 +263,7 @@
         private System.Windows.Forms.Panel dbPreviewPanel;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.Label dbText;
     }
 }
 

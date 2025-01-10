@@ -17,7 +17,7 @@ namespace COMP3951_Lab1_WillOtterbein
         /// <summary>
         /// DBRecord struct is record for the fake database.
         /// </summary>
-        struct DBRecord
+        public struct DBRecord
         {
             static int count = 0;
             public int ID { get; }
@@ -70,12 +70,13 @@ namespace COMP3951_Lab1_WillOtterbein
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>
         /// <param name="middleName"></param>
-        public static void AddRecordToDB(String firstName, String lastName, String middleName)
+        public static DBRecord AddRecordToDB(String firstName, String lastName, String middleName)
         {
             Console.WriteLine($">>>NEW REC\n>>>>>>{firstName}, {lastName}, {middleName}");
             DBRecord nRec = new DBRecord(firstName, lastName, middleName);
             records.Add(nRec.ID, nRec);
             PrintRecords();
+            return nRec;
         }
 
         /// <summary>
