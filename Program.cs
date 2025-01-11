@@ -16,7 +16,7 @@ namespace COMP3951_Lab1_WillOtterbein
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new WillFormApp());
         }
     }
 }

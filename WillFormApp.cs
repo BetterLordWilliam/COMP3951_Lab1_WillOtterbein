@@ -25,9 +25,9 @@ namespace COMP3951_Lab1_WillOtterbein
     /// - Submit_Click
     /// - Clear_Click
     /// </summary>
-    public partial class Form1 : Form
+    public partial class WillFormApp : Form
     {
-        public Form1()
+        public WillFormApp()
         {
             InitializeComponent();
         }

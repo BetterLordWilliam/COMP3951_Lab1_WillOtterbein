@@ -1,6 +1,6 @@
 ﻿namespace COMP3951_Lab1_WillOtterbein
 {
-    partial class Form1
+    partial class WillFormApp
     {
         /// <summary>
         /// Required designer variable.
