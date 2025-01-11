@@ -5,48 +5,94 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Lab 1
+/// Author(s): Will Otterbein
+/// Date: January 10 2024
+/// Revision: 1
+/// </summary>
 namespace COMP3951_Lab1_WillOtterbein
 {
     /// <summary>
     /// Class represents a fake database where records can be added
     /// </summary>
-    public static class DBFake
+    public class DBFake
     {
-        static readonly Hashtable records = new Hashtable();
-
         /// <summary>
-        /// DBRecord struct is record for the fake database.
+        /// DBRecord class is the template for records in the fake database.
         /// </summary>
-        public struct DBRecord
+        public class DBRecord
         {
-            static int count = 0;
-            public int ID { get; }
-            public String FirstName { get; set; }
-            public String MiddleName { get; set; }
-            public String LastName { get; set; }
+            private static int count = 0;
+            private string firstName, lastName;
 
             /// <summary>
-            /// Constructor for the DBRecord struct.
+            /// Public auto-implemented property.
+            /// </summary>
+            public string MiddleName { get; set; }
+            /// <summary>
+            /// Public auto-implemented property.
+            /// </summary>
+            public int ID { get; set; }
+
+            /// <summary>
+            /// FirstName property implementation.
+            /// Contains validation
+            /// </summary>
+            public string FirstName
+            {
+                get
+                {
+                    return firstName;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value))
+                        firstName = value;
+                }
+            }
+            /// <summary>
+            /// LastName property implementation.
+            /// Contains validation
+            /// </summary>
+            public string LastName
+            {
+                get
+                {
+                    return lastName;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value))
+                        lastName = value;
+                }
+            }
+
+            /// <summary>
+            /// Constructor for the DBRecord object.
             /// </summary>
             /// <param name="firstName"></param>
             /// <param name="lastName"></param>
             /// <param name="middleName"></param>
-            public DBRecord(String firstName, String lastName, String middleName = "")
+            public DBRecord(string fName, string lName, string mName)
             {
-                FirstName = firstName;
-                MiddleName = middleName;
-                LastName = lastName;
+                FirstName = fName;
+                LastName = lName;
+                MiddleName = mName;
                 ID = count++;
             }
+
             /// <summary>
-            /// Returns a string representing the DBRecord struct.
+            /// Returns a string representing the DBRecord object.
             /// </summary>
             /// <returns></returns>
-            public override string ToString() 
+            public override string ToString()
             {
                 return $"{ID}\t{FirstName}\t{LastName}\t{MiddleName}";
             }
-        };
+        }
+
+        static readonly Hashtable records = new Hashtable();
 
         /// <summary>
         /// Show the records in the DBFake list.
@@ -70,12 +116,10 @@ namespace COMP3951_Lab1_WillOtterbein
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>
         /// <param name="middleName"></param>
-        public static DBRecord AddRecordToDB(String firstName, String lastName, String middleName)
+        public static DBRecord AddRecordToDB(string firstName, string lastName, string middleName)
         {
-            Console.WriteLine($">>>NEW REC\n>>>>>>{firstName}, {lastName}, {middleName}");
             DBRecord nRec = new DBRecord(firstName, lastName, middleName);
             records.Add(nRec.ID, nRec);
-            PrintRecords();
             return nRec;
         }
 
