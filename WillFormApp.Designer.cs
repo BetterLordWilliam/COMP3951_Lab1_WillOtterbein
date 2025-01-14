@@ -2,6 +2,8 @@
 {
     partial class WillFormApp
     {
+        protected DBList subform = new DBList();
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -240,7 +242,7 @@
             this.mNameToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.mNameToolTip.ToolTipTitle = "Form Field";
             // 
-            // Form1
+            // WillFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,7 +252,7 @@
             this.Controls.Add(this.FormControlPanel);
             this.Controls.Add(this.personalInformation);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "WillFormApp";
             this.Text = "MyAccount";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.personalInformation.ResumeLayout(false);

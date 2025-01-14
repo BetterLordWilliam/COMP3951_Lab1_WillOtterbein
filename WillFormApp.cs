@@ -64,12 +64,22 @@ namespace COMP3951_Lab1_WillOtterbein
 
         private void ShowHideAccounts_Click(object sender, EventArgs e)
         {
-            // Show/hide the accounts box
-            if (accountPreviewBox.Visible) {
-                accountPreviewBox.Visible = false;
-            } else { 
-                accountPreviewBox.Visible = true; 
+            // Show/hide the accoaaunts box
+            if (subform.Visible)
+            {
+                // accountPreviewBox.Visible = false;
+
+                //subform = new DBList();
+                //Console.WriteLine("Spawned");
+                subform.Visible = false;
+            } 
+            else
+            {
+                //subform.Dispose();
+                //Console.WriteLine("Disposed");
+                subform.Visible = true;
             }
+            // Console.WriteLine("Clicked");
         }
 
         private void Form1_Load(object sender, EventArgs e)

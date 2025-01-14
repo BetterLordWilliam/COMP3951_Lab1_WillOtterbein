@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBFake.cs" />
+    <Compile Include="DBList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WillFormApp.cs">
       <SubType>Form</SubType>
     </Compile>
