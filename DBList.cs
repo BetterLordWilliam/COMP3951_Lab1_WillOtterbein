@@ -59,7 +59,5 @@ namespace COMP3951_Lab1_WillOtterbein
                 dbRecordsList.Text += record.ToString() + "\r\n";
             }
         }
-
-        //public void refresh
     }
 }

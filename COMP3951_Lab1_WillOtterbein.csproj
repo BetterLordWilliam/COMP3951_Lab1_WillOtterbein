@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{30F486E0-F244-4EE0-91A9-06B920F02F12}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>COMP3951_Lab1_WillOtterbein</RootNamespace>
     <AssemblyName>COMP3951_Lab1_WillOtterbein</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
