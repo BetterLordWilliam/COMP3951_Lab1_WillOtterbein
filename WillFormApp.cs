@@ -12,8 +12,8 @@ using System.Windows.Forms;
 /// <summary>
 /// Lab 1
 /// Author(s): Will Otterbein
-/// Date: January 10 2024
-/// Revision: 1
+/// Date: January 15 2024
+/// Revision: 2
 /// </summary>
 namespace COMP3951_Lab1_WillOtterbein
 {
@@ -59,32 +59,14 @@ namespace COMP3951_Lab1_WillOtterbein
         /// <param name="nRec"></param>
         private void AddDBObjToLabel(DBFake.DBRecord nRec)
         {
-            dbText.Text += $"{nRec}\n";
+            subform.refreshRecordsList();
+            // subform.
+            // dbText.Text += $"{nRec}\n";
         }
 
         private void ShowHideAccounts_Click(object sender, EventArgs e)
         {
-            // Show/hide the accoaaunts box
-            if (subform.Visible)
-            {
-                // accountPreviewBox.Visible = false;
-
-                //subform = new DBList();
-                //Console.WriteLine("Spawned");
-                subform.Visible = false;
-            } 
-            else
-            {
-                //subform.Dispose();
-                //Console.WriteLine("Disposed");
-                subform.Visible = true;
-            }
-            // Console.WriteLine("Clicked");
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            accountPreviewBox.Visible = false;
+            subform.ShowDialog();
         }
 
         private void Submit_Click(object sender, EventArgs e)

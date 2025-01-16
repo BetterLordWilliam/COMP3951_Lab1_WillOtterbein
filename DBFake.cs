@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 /// <summary>
 /// Lab 1
 /// Author(s): Will Otterbein
-/// Date: January 10 2024
-/// Revision: 1
+/// Date: January 15 2024
+/// Revision: 2
 /// </summary>
 namespace COMP3951_Lab1_WillOtterbein
 {

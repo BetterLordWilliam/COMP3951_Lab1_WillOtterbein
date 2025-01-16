@@ -42,8 +42,6 @@
             this.ShowHideAccounts = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.submit = new System.Windows.Forms.Button();
-            this.accountPreviewBox = new System.Windows.Forms.GroupBox();
-            this.dbText = new System.Windows.Forms.RichTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.fNameFormFieldToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -51,7 +49,6 @@
             this.mNameToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.personalInformation.SuspendLayout();
             this.FormControlPanel.SuspendLayout();
-            this.accountPreviewBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +145,7 @@
             this.FormControlPanel.Controls.Add(this.ShowHideAccounts);
             this.FormControlPanel.Controls.Add(this.clear);
             this.FormControlPanel.Controls.Add(this.submit);
-            this.FormControlPanel.Location = new System.Drawing.Point(7, 241);
+            this.FormControlPanel.Location = new System.Drawing.Point(7, 105);
             this.FormControlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FormControlPanel.Name = "FormControlPanel";
             this.FormControlPanel.Size = new System.Drawing.Size(423, 37);
@@ -160,7 +157,7 @@
             this.ShowHideAccounts.Name = "ShowHideAccounts";
             this.ShowHideAccounts.Size = new System.Drawing.Size(129, 23);
             this.ShowHideAccounts.TabIndex = 2;
-            this.ShowHideAccounts.Text = "Show/Hide Accounts";
+            this.ShowHideAccounts.Text = "Show Accounts";
             this.ShowHideAccounts.UseVisualStyleBackColor = true;
             this.ShowHideAccounts.Click += new System.EventHandler(this.ShowHideAccounts_Click);
             // 
@@ -189,34 +186,6 @@
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
             this.submit.Click += new System.EventHandler(this.Submit_Click);
-            // 
-            // accountPreviewBox
-            // 
-            this.accountPreviewBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.accountPreviewBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.accountPreviewBox.Controls.Add(this.dbText);
-            this.accountPreviewBox.Location = new System.Drawing.Point(7, 105);
-            this.accountPreviewBox.Margin = new System.Windows.Forms.Padding(2);
-            this.accountPreviewBox.Name = "accountPreviewBox";
-            this.accountPreviewBox.Padding = new System.Windows.Forms.Padding(2);
-            this.accountPreviewBox.Size = new System.Drawing.Size(423, 133);
-            this.accountPreviewBox.TabIndex = 3;
-            this.accountPreviewBox.TabStop = false;
-            this.accountPreviewBox.Text = "Preview Accounts";
-            // 
-            // dbText
-            // 
-            this.dbText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dbText.Location = new System.Drawing.Point(6, 19);
-            this.dbText.Name = "dbText";
-            this.dbText.ReadOnly = true;
-            this.dbText.Size = new System.Drawing.Size(411, 109);
-            this.dbText.TabIndex = 0;
-            this.dbText.Text = "ID\tFN\tLN\tMN\n";
             // 
             // errorProvider1
             // 
@@ -247,18 +216,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(436, 284);
-            this.Controls.Add(this.accountPreviewBox);
+            this.ClientSize = new System.Drawing.Size(436, 153);
             this.Controls.Add(this.FormControlPanel);
             this.Controls.Add(this.personalInformation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WillFormApp";
-            this.Text = "MyAccount";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Account Entry";
             this.personalInformation.ResumeLayout(false);
             this.personalInformation.PerformLayout();
             this.FormControlPanel.ResumeLayout(false);
-            this.accountPreviewBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
@@ -277,10 +244,8 @@
         private System.Windows.Forms.Panel FormControlPanel;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.GroupBox accountPreviewBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.RichTextBox dbText;
         private System.Windows.Forms.Button ShowHideAccounts;
         private System.Windows.Forms.ToolTip fNameFormFieldToolTip;
         private System.Windows.Forms.ToolTip lNameToolTip;
